@@ -3,15 +3,20 @@ main {
     width: 1920px;
 }
 #kitchen {
+    display: none;
     position: absolute;
     top: 720px;
     left: 640px;
 }
 #pancake {
+    border-top-style: solid;
+    border-top-width: 10px;
+    border-color: rgb(238, 124, 13);
     width: 640px;
     height: 20px;
-    background: yellow;
+    background: rgb(253, 171, 50);
     display: block;
+    border-radius: 5px;
 }
 #pancake.doAflip {
     animation-name: flip;
@@ -27,12 +32,22 @@ main {
     }
 }
 #pan {
-    width: 640px;
-    height: 20px;
-    background: red;
     display: block;
     position: relative;
     top: 0;
+    left: -10px
+}
+#pan #handle {
+    width: 840px;
+    height: 20px;
+    background: black;
+}
+#pan #bottom {
+    width: 660px;
+    height: 20px;
+    background: black;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
 }
 #pan.doAflip {
     animation-name: toss;
