@@ -13,18 +13,9 @@ main {
     background: yellow;
     display: block;
 }
-#pan {
-    width: 640px;
-    height: 20px;
-    background: red;
-    display: block;
-    position: relative;
-    top: 0;
-}
-.doAflip {
+#pancake.doAflip {
     animation-name: flip;
     animation-duration: 2500ms;
-    /* animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0); */
     animation-timing-function: ease-in;
 }
 @keyframes flip {
@@ -34,4 +25,26 @@ main {
     100% {
         transform:rotate(180deg);
     }
+}
+#pan {
+    width: 640px;
+    height: 20px;
+    background: red;
+    display: block;
+    position: relative;
+    top: 0;
+}
+#pan.doAflip {
+    animation-name: toss;
+    animation-duration: 2500ms;
+    animation-timing-function: ease-in;
+}
+@keyframes toss {
+    10% {
+        transform: translateY(-50px);
+    }
+    80%  {
+        transform: translateY(100px);
+    }
+
 }
